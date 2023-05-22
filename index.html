@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search BCS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" /> -->
+
+</head>
+<body id="content">
+
+  <div class="search-container">
+    <input class="search-input" type="text" id="searchInput" placeholder="Search..." onkeyup="searchTable()">
+  </div>
+
+<table id="dataTable">
+  <tr>
+    <th onclick="sortTable(0)">
+      Event <span id="eventSortIcon" class="fas fa-sort"></span>
+    </th>
+    <th onclick="sortTable(1)">
+      Date <span id="dateSortIcon" class="fas fa-sort"></span>
+    </th>
+    <th onclick="sortTable(2)">
+      Description <span id="descriptionSortIcon" class="fas fa-sort"></span>
+    </th>
+  </tr>
+
+    <tbody>
+        <tr>
+            <td>Spanish Civil War</td>
+            <td>1936-1939</td>
+            <td>A conflict in Spain between the Republicans and Nationalists, foreshadowing World War II.</td>
+          </tr>
+          <tr>
+            <td>Assassination of Archduke Franz Ferdinand</td>
+            <td>1914</td>
+            <td>The assassination of Archduke Franz Ferdinand of Austria led to the outbreak of World War I.</td>
+          </tr>
+          <tr>
+            <td>Reformation</td>
+            <td>1517</td>
+            <td>Martin Luther's Ninety-Five Theses sparked a religious movement that led to the creation of Protestant Christianity.</td>
+          </tr>
+          <tr>
+            <td>Rwandan Genocide</td>
+            <td>1994</td>
+            <td>An ethnic conflict in Rwanda resulted in the mass murder of hundreds of thousands of Tutsis by the Hutu majority.</td>
+          </tr>
+          <tr>
+            <td>Vietnam War</td>
+            <td>1955-1975</td>
+            <td>A protracted war between North and South Vietnam, with involvement from the United States and other countries.</td>
+          </tr>
+          <tr>
+            <td>Chernobyl Disaster</td>
+            <td>1986</td>
+            <td>A nuclear power plant explosion in Ukraine, leading to the release of radioactive material and environmental damage.</td>
+          </tr>
+          <tr>
+            <td>Emancipation Proclamation</td>
+            <td>1863</td>
+            <td>President Abraham Lincoln issued an executive order to abolish slavery in the Confederate states during the American Civil War.</td>
+          </tr>
+          <tr>
+            <td>Women's Suffrage Movement</td>
+            <td>19th-20th century</td>
+            <td>A movement advocating for women's right to vote and equal rights, leading to significant social and political changes.</td>
+          </tr>
+          <tr>
+            <td>Columbian Exchange</td>
+            <td>15th-16th century</td>
+            <td>The widespread transfer of plants, animals, diseases, and technologies between the Americas and the rest of the world following Christopher Columbus's voyages.</td>
+          </tr>
+          <tr>
+            <td>Partition of India</td>
+            <td>1947</td>
+            <td>India gained independence from British rule, resulting in the division of British India into India and Pakistan.</td>
+          </tr>
+          <tr>
+            <td>French and Indian War</td>
+            <td>1754-1763</td>
+            <td>A conflict between France and Great Britain, with Native American allies on both sides, over territorial claims in North America.</td>
+          </tr>
+          <tr>
+            <td>Abolition of Slavery</td>
+            <td>19th-20th century</td>
+            <td>A movement to end the institution of slavery, leading to its legal abolition in various countries.</td>
+          </tr>
+          <tr>
+            <td>Holocaust</td>
+            <td>1941-1945</td>
+            <td>The systematic persecution and genocide of approximately six million Jews by Nazi Germany during World War II.</td>
+          </tr>
+          <tr>
+            <td>Reign of Terror</td>
+            <td>1793-1794</td>
+            <td>A period during the French Revolution characterized by mass executions and political repression.</td>
+          </tr>
+          <tr>
+            <td>Russian Revolution</td>
+            <td>1917</td>
+            <td>The Bolsheviks, led by Vladimir Lenin, seized power in Russia, leading to the establishment of a socialist government.</td>
+          </tr>
+          <tr>
+            <td>Chinese Cultural Revolution</td>
+            <td>1966-1976</td>
+            <td>A political movement in China aimed at removing perceived bourgeois elements from society and strengthening communism.</td>
+          </tr>
+          <tr>
+            <td>American Civil War</td>
+            <td>1861-1865</td>
+            <td>A conflict between the Northern states (Union) and the Southern states (Confederacy) over issues including slavery and states' rights.</td>
+          </tr>
+          <tr>
+            <td>Iranian Revolution</td>
+            <td>1979</td>
+            <td>The overthrow of the Shah of Iran and the establishment of an Islamic republic led by Ayatollah Khomeini.</td>
+          </tr>
+          <tr>
+            <td>Japanese Internment</td>
+            <td>1942-1945</td>
+            <td>During World War II, the United States forcibly relocated and interned Japanese-Americans in camps due to national security concerns.</td>
+          </tr>
+          <tr>
+            <td>Russian Civil War</td>
+            <td>1918-1922</td>
+            <td>A multi-sided conflict in Russia following the Russian Revolution, involving various factions fighting for control.</td>
+          </tr>
+          <tr>
+            <td>Haitian Revolution</td>
+            <td>1791-1804</td>
+            <td>A successful slave revolt against French colonial rule, resulting in the establishment of Haiti as an independent nation.</td>
+          </tr>
+          <tr>
+            <td>Opium Wars</td>
+            <td>1839-1860</td>
+            <td>Armed conflicts between China and Western powers over the opium trade and Chinese sovereignty.</td>
+          </tr>
+          <tr>
+            <td>Indian Removal Act</td>
+            <td>1830</td>
+            <td>A law signed by President Andrew Jackson that forced Native American tribes to relocate west of the Mississippi River.</td>
+          </tr>
+          <tr>
+            <td>Bolshevik Revolution</td>
+            <td>1917</td>
+            <td>The Bolshevik Party, led by Vladimir Lenin, seized power in Russia, leading to the formation of the Soviet Union.</td>
+          </tr>
+          <tr>
+            <td>Prohibition</td>
+            <td>1920-1933</td>
+            <td>A nationwide ban on the production, sale, and transportation of alcoholic beverages in the United States.</td>
+          </tr>
+          <tr>
+            <td>Iran-Iraq War</td>
+            <td>1980-1988</td>
+            <td>A protracted conflict between Iran and Iraq, resulting in significant loss of life and economic damage.</td>
+          </tr>
+          <tr>
+            <td>Rwandan Independence</td>
+            <td>1962</td>
+            <td>Rwanda gained independence from Belgian colonial rule.</td>
+          </tr>
+          <tr>
+            <td>Space Shuttle Columbia Disaster</td>
+            <td>2003</td>
+            <td>The Space Shuttle Columbia disintegrated during re-entry, leading to the loss of all seven crew members.</td>
+          </tr>
+          <tr>
+            <td>Reign of Queen Victoria</td>
+            <td>1837-1901</td>
+            <td>A period of significant industrial, cultural, and political changes in the United Kingdom and its empire.</td>
+          </tr>
+          <tr>
+            <td>Treaty of Versailles</td>
+            <td>1919</td>
+            <td>The peace treaty that officially ended World War I, imposing reparations and redrawing borders.</td>
+          </tr>
+          <tr>
+            <td>Spanish Inquisition</td>
+            <td>1478-1834</td>
+            <td>A period of Catholic religious persecution and suppression of heresy in Spain.</td>
+          </tr>
+          <tr>
+            <td>Reign of Queen Elizabeth I</td>
+            <td>1558-1603</td>
+            <td>A period known as the Elizabethan era, marked by cultural and artistic flourishing in England.</td>
+          </tr>
+          <tr>
+            <td>Cold War</td>
+            <td>1947-1991</td>
+            <td>A period of geopolitical tension and rivalry between the United States and the Soviet Union.</td>
+          </tr>
+          <tr>
+            <td>Iran Hostage Crisis</td>
+            <td>1979-1981</td>
+            <td>A diplomatic standoff between the United States and Iran, with American embassy personnel held hostage.</td>
+          </tr>
+          <tr>
+            <td>Assassination of Julius Caesar</td>
+            <td>44 BC</td>
+            <td>Julius Caesar, a Roman statesman and general, was assassinated, leading to political upheaval in the Roman Republic.</td>
+          </tr>
+          <tr>
+            <td>Opium Trade in China</td>
+            <td>18th-19th century</td>
+            <td>Western powers, particularly Great Britain, imposed the opium trade on China, leading to social and economic consequences.</td>
+          </tr>
+          <tr>
+            <td>Age of Enlightenment</td>
+            <td>17th-18th century</td>
+            <td>An intellectual and cultural movement emphasizing reason, science, and individual rights.</td>
+          </tr>
+          <tr>
+            <td>Formation of the United Nations</td>
+            <td>1945</td>
+            <td>The United Nations was established as an international organization to promote peace, security, and cooperation.</td>
+          </tr>
+          <tr>
+            <td>Iran-Contra Affair</td>
+            <td>1985-1987</td>
+            <td>A political scandal involving the illegal sale of weapons to Iran and the diversion of funds to support anti-Sandinista rebels in Nicaragua.</td>
+          </tr>
+          <tr>
+            <td>Salem Witch Trials</td>
+            <td>1692-1693</td>
+            <td>A series of hearings and prosecutions in colonial Massachusetts, resulting in the execution of several individuals accused of witchcraft.</td>
+          </tr>
+          <tr>
+            <td>Reign of King Louis XIV</td>
+            <td>1643-1715</td>
+            <td>Known as the "Sun King," Louis XIV ruled France with absolute power and promoted arts and culture.</td>
+          </tr>
+          <tr>
+            <td>Panama Canal Construction</td>
+            <td>1904-1914</td>
+            <td>The United States undertook the construction of the Panama Canal, connecting the Atlantic and Pacific Oceans.</td>
+          </tr>
+          <tr>
+            <td>Proclamation of the People's Republic of China</td>
+            <td>1949</td>
+            <td>The Communist Party of China declared the establishment of the People's Republic of China under Mao Zedong's leadership.</td>
+          </tr>
+          <tr>
+            <td>Discovery of Penicillin</td>
+            <td>1928</td>
+            <td>Scottish scientist Alexander Fleming discovered the antibiotic properties of penicillin, revolutionizing medicine.</td>
+          </tr>
+          <tr>
+            <td>Crusades</td>
+            <td>11th-13th century</td>
+            <td>A series of military campaigns launched by Western European Christians to recapture the Holy Land from Muslim rule.</td>
+          </tr>
+          <tr>
+            <td>Partition of Africa</td>
+            <td>1884-1885</td>
+            <td>European powers divided and colonized Africa during the Scramble for Africa, leading to long-lasting political and social effects.</td>
+          </tr>
+          <tr>
+            <td>Space Race</td>
+            <td>1955-1972</td>
+            <td>A competition between the United States and the Soviet Union to achieve milestones in space exploration and technology.</td>
+          </tr>
+          <tr>
+            <td>Emperor Hirohito's Reign</td>
+            <td>1926-1989</td>
+            <td>Hirohito, the emperor of Japan, presided over a period that included World War II and Japan's post-war reconstruction.</td>
+          </tr>
+          <tr>
+            <td>Discovery of America</td>
+            <td>1492</td>
+            <td>Christopher Columbus's voyage to the Americas, opening the era of European exploration and colonization.</td>
+          </tr>
+          <tr>
+            <td>Industrial Revolution</td>
+            <td>18th-19th century</td>
+            <td>A period of significant technological, economic, and social changes, characterized by the transition to machine production and urbanization.</td>
+          </tr>
+          <tr>
+            <td>Montgomery Bus Boycott</td>
+            <td>1955-1956</td>
+            <td>A civil rights protest against racial segregation on buses in Montgomery, Alabama, led by Martin Luther King Jr.</td>
+          </tr>
+          <tr>
+            <td>Declaration of Independence</td>
+            <td>1776</td>
+            <td>The Thirteen Colonies declared their independence from Great Britain, leading to the American Revolutionary War.</td>
+          </tr>
+          <tr>
+            <td>Construction of the Great Wall of China</td>
+            <td>7th century BC - 17th century AD</td>
+            <td>A series of fortifications constructed to protect China from invasions, with contributions from various dynasties.</td>
+          </tr>
+          <tr>
+            <td>Spanish Armada</td>
+            <td>1588</td>
+            <td>A failed naval invasion of England by the Spanish Empire, marking a turning point in European history.</td>
+          </tr>
+          <tr>
+            <td>End of Apartheid in South Africa</td>
+            <td>1994</td>
+            <td>Nelson Mandela became the first black president of South Africa, marking the end of institutionalized racial segregation.</td>
+          </tr>
+          <tr>
+            <td>World War II</td>
+            <td>1939-1945</td>
+            <td>A global conflict involving many nations, with major powers aligned in two opposing military alliances, resulting in widespread devastation and significant geopolitical changes.</td>
+          </tr>
+          <tr>
+            <td>First Moon Landing</td>
+            <td>1969</td>
+            <td>The Apollo 11 mission successfully landed astronauts Neil Armstrong and Buzz Aldrin on the moon, a significant achievement in human space exploration.</td>
+          </tr>
+          <tr>
+            <td>Mayan Civilization</td>
+            <td>2000 BC - 16th century AD</td>
+            <td>An ancient Mesoamerican civilization known for its advancements in mathematics, astronomy, and architecture.</td>
+          </tr>
+          <tr>
+            <td>Magna Carta</td>
+            <td>1215</td>
+            <td>An English document that established the principle that the king is subject to the law and granted certain rights to the nobility and freemen.</td>
+          </tr>
+          <tr>
+            <td>French Revolution</td>
+            <td>1789-1799</td>
+            <td>A period of radical social and political upheaval in France, leading to the end of the monarchy and the rise of Napoleon Bonaparte.</td>
+          </tr>
+          <tr>
+            <td>Battle of Waterloo</td>
+            <td>1815</td>
+            <td>A decisive battle in which Napoleon Bonaparte was defeated, marking the end of his rule and the Napoleonic Wars.</td>
+          </tr>
+          <tr>
+            <td>American Revolution</td>
+            <td>1775-1783</td>
+            <td>A war fought by the Thirteen Colonies against British rule, resulting in the establishment of the United States of America.</td>
+          </tr>
+          <tr>
+            <td>Islamic Golden Age</td>
+            <td>8th-14th century</td>
+            <td>A period of cultural, scientific, and intellectual advancements in the Islamic world.</td>
+          </tr>
+          <tr>
+            <td>Space Shuttle Challenger Disaster</td>
+            <td>1986</td>
+            <td>The Space Shuttle Challenger exploded shortly after launch, resulting in the deaths of all seven crew members.</td>
+          </tr>
+          <tr>
+            <td>Berlin Wall Falls</td>
+            <td>1989</td>
+            <td>The dismantling of the Berlin Wall, symbolizing the end of the Cold War and the reunification of East and West Germany.</td>
+          </tr>
+          <tr>
+            <td>Trail of Tears</td>
+            <td>1838-1839</td>
+            <td>The forced relocation of Native American tribes, particularly the Cherokee, from their ancestral lands to designated Indian Territory.</td>
+          </tr>
+          <tr>
+            <td>Voyages of Zheng He</td>
+            <td>1405-1433</td>
+            <td>A series of maritime expeditions led by Chinese admiral Zheng He, showcasing China's naval power and promoting trade and diplomacy.</td>
+          </tr>
+          <tr>
+            <td>Hundred Years' War</td>
+            <td>1337-1453</td>
+            <td>A series of conflicts between England and France, resulting in territorial disputes and political changes.</td>
+          </tr>
+          <tr>
+            <td>Industrialization in Japan</td>
+            <td>19th century</td>
+            <td>Japan underwent a rapid transformation from a feudal society to an industrialized nation, adopting Western technology and practices.</td>
+          </tr>
+          <tr>
+            <td>Invention of the Printing Press</td>
+            <td>15th century</td>
+            <td>Johannes Gutenberg's invention of the printing press revolutionized the spread of knowledge and contributed to the Renaissance and Reformation.</td>
+          </tr>
+          <tr>
+            <td>Spanish-American War</td>
+            <td>1898</td>
+            <td>A conflict between the United States and Spain, resulting in the acquisition of territories by the United States and the end of Spanish colonial rule.</td>
+          </tr>
+          <tr>
+            <td>Abdication of Emperor Napoleon</td>
+            <td>1814</td>
+            <td>Napoleon Bonaparte abdicated as emperor of the French, leading to his exile and the restoration of the Bourbon monarchy.</td>
+          </tr>
+          <tr>
+            <td>Black Death</td>
+            <td>1347-1351</td>
+            <td>A devastating pandemic caused by the bubonic plague, resulting in a significant decline in the population of Europe.</td>
+          </tr>
+          <tr>
+            <td>Age of Discovery</td>
+            <td>15th-17th century</td>
+            <td>A period of European exploration and expansion, with voyages to the Americas, Africa, and Asia.</td>
+          </tr>
+          <tr>
+            <td>Establishment of the European Union</td>
+            <td>1993</td>
+            <td>The Maastricht Treaty was signed, creating the European Union and fostering greater economic and political integration among European nations.</td>
+          </tr>
+          <tr>
+            <td>Russian Revolution</td>
+            <td>1917</td>
+            <td>The Bolsheviks, led by Vladimir Lenin, seized power in Russia, leading to the establishment of a socialist government.</td>
+          </tr>
+          <tr>
+            <td>Chinese Cultural Revolution</td>
+            <td>1966-1976</td>
+            <td>A political movement in China aimed at removing perceived bourgeois elements from society and strengthening communism.</td>
+          </tr>
+          <tr>
+            <td>American Civil War</td>
+            <td>1861-1865</td>
+            <td>A conflict between the Northern states (Union) and the Southern states (Confederacy) over issues including slavery and states' rights.</td>
+          </tr>
+          <tr>
+            <td>Iranian Revolution</td>
+            <td>1979</td>
+            <td>The overthrow of the Shah of Iran and the establishment of an Islamic republic led by Ayatollah Khomeini.</td>
+          </tr>
+          <tr>
+            <td>Japanese Internment</td>
+            <td>1942-1945</td>
+            <td>During World War II, the United States forcibly relocated and interned Japanese-Americans in camps due to national security concerns.</td>
+          </tr>
+          <tr>
+            <td>Russian Civil War</td>
+            <td>1918-1922</td>
+            <td>A multi-sided conflict in Russia following the Russian Revolution, involving various factions fighting for control.</td>
+          </tr>
+          <tr>
+            <td>Haitian Revolution</td>
+            <td>1791-1804</td>
+            <td>A successful slave revolt against French colonial rule, resulting in the establishment of Haiti as an independent nation.</td>
+          </tr>
+          <tr>
+            <td>Opium Wars</td>
+            <td>1839-1860</td>
+            <td>Armed conflicts between China and Western powers over the opium trade and Chinese sovereignty.</td>
+          </tr>
+          <tr>
+            <td>Indian Removal Act</td>
+            <td>1830</td>
+            <td>A law signed by President Andrew Jackson that forced Native American tribes to relocate west of the Mississippi River.</td>
+          </tr>
+          <tr>
+            <td>Bolshevik Revolution</td>
+            <td>1917</td>
+            <td>The Bolshevik Party, led by Vladimir Lenin, seized power in Russia, leading to the formation of the Soviet Union.</td>
+          </tr>
+          <tr>
+            <td>Prohibition</td>
+            <td>1920-1933</td>
+            <td>A nationwide ban on the production, sale, and transportation of alcoholic beverages in the United States.</td>
+          </tr>
+          <tr>
+            <td>Iran-Iraq War</td>
+            <td>1980-1988</td>
+            <td>A protracted conflict between Iran and Iraq, resulting in significant loss of life and economic damage.</td>
+          </tr>
+          <tr>
+            <td>Age of Exploration</td>
+            <td>15th-17th century</td>
+            <td>European explorers embarked on voyages to discover new lands, establish trade routes, and expand colonial empires.</td>
+          </tr>
+          <tr>
+            <td>Meiji Restoration</td>
+            <td>1868</td>
+            <td>A period of major political and social reforms in Japan, including the end of the samurai class and the modernization of the country.</td>
+          </tr>
+          <tr>
+            <td>Apartheid in South Africa</td>
+            <td>1948-1994</td>
+            <td>A system of racial segregation and discrimination enforced by the National Party government in South Africa.</td>
+          </tr>
+          <tr>
+            <td>Vietnam War</td>
+            <td>1955-1975</td>
+            <td>A protracted conflict between North Vietnam (supported by communist allies) and South Vietnam (supported by the United States and its allies).</td>
+          </tr>
+          <tr>
+            <td>Founding of Rome</td>
+            <td>753 BC</td>
+            <td>According to legend, Rome was founded by Romulus and Remus, leading to the rise of the Roman Republic and later the Roman Empire.</td>
+          </tr>
+          <tr>
+            <td>Columbian Exchange</td>
+            <td>15th-16th century</td>
+            <td>The widespread transfer of plants, animals, diseases, and cultures between the Americas and the Old World following Christopher Columbus's voyages.</td>
+          </tr>
+          <tr>
+            <td>Women's Suffrage Movement</td>
+            <td>19th-20th century</td>
+            <td>A global movement advocating for women's right to vote and equality.</td>
+          </tr>
+          <tr>
+            <td>First Industrial Revolution</td>
+            <td>18th-19th century</td>
+            <td>A period of rapid industrialization, characterized by advancements in machinery, manufacturing, and transportation.</td>
+          </tr>
+          <tr>
+            <td>War of 1812</td>
+            <td>1812-1815</td>
+            <td>A conflict between the United States and Great Britain, stemming from issues including trade restrictions and impressment of American sailors.</td>
+          </tr>
+          <tr>
+            <td>American Civil Rights Movement</td>
+            <td>1950s-1960s</td>
+            <td>A social and political movement advocating for equal rights and an end to racial segregation and discrimination against African Americans in the United States.</td>
+          </tr>
+          <tr>
+            <td>Fall of the Soviet Union</td>
+            <td>1991</td>
+            <td>The dissolution of the Soviet Union, leading to the end of the Cold War and the emergence of independent nations.</td>
+          </tr>
+          <tr>
+            <td>Partition of India</td>
+            <td>1947</td>
+            <td>The division of British India into two separate nations, India and Pakistan, resulting in widespread violence and mass migration.</td>
+          </tr>
+          <tr>
+            <td>Scientific Revolution</td>
+            <td>16th-17th century</td>
+            <td>A period of transformative scientific advancements, including the development of the scientific method and significant discoveries in various fields of science.</td>
+          </tr>
+          <tr>
+            <td>War of Independence in Mexico</td>
+            <td>1810-1821</td>
+            <td>A revolution against Spanish colonial rule in Mexico, resulting in Mexico's independence.</td>
+          </tr>
+          <tr>
+            <td>Egyptian Revolution</td>
+            <td>2011</td>
+            <td>A popular uprising against President Hosni Mubarak's regime, leading to his resignation and political changes in Egypt.</td>
+          </tr>
+          <tr>
+            <td>Exploration of Antarctica</td>
+            <td>19th-20th century</td>
+            <td>Various expeditions explored and conducted scientific research in the Antarctic region, leading to the establishment of international agreements for its preservation.</td>
+          </tr>
+          <tr>
+            <td>Rwandan Genocide</td>
+            <td>1994</td>
+            <td>A mass genocide in Rwanda, resulting in the systematic murder of an estimated 800,000 ethnic Tutsis by Hutu extremists.</td>
+          </tr>
+          <tr>
+            <td>Marshall Plan</td>
+            <td>1948-1952</td>
+            <td>An economic aid program initiated by the United States to assist in the rebuilding of Western European economies after World War II.</td>
+          </tr>
+          <tr>
+            <td>Chernobyl Disaster</td>
+            <td>1986</td>
+            <td>A catastrophic nuclear accident that occurred at the Chernobyl Nuclear Power Plant in Ukraine, causing widespread radioactive contamination and significant health and environmental impacts.</td>
+          </tr>
+          <tr>
+            <td>Easter Rising</td>
+            <td>1916</td>
+            <td>An armed rebellion in Ireland against British rule, seeking independence and the establishment of an Irish Republic.</td>
+          </tr>
+          <tr>
+            <td>Industrial Revolution in the United States</td>
+            <td>18th-19th century</td>
+            <td>A period of rapid industrialization in the United States, characterized by advancements in manufacturing, transportation, and technology.</td>
+          </tr>
+          <tr>
+            <td>Chinese Exclusion Act</td>
+            <td>1882</td>
+            <td>A U.S. federal law that prohibited the immigration of Chinese laborers, reflecting anti-Chinese sentiment and economic competition in the United States.</td>
+          </tr>
+          <tr>
+            <td>Armenian Genocide</td>
+            <td>1915-1923</td>
+            <td>The systematic extermination of the Armenian population by the Ottoman Empire, resulting in the deaths of an estimated 1.5 million Armenians.</td>
+          </tr>
+          <tr>
+            <td>Decolonization of Africa</td>
+            <td>20th century</td>
+            <td>A process in which African colonies gained independence from European colonial powers, leading to the establishment of numerous African nations.</td>
+          </tr>
+          <tr>
+            <td>Trail of Tears</td>
+            <td>1838-1839</td>
+            <td>The forced relocation of Native American tribes, particularly the Cherokee, from their ancestral lands to designated Indian Territory.</td>
+          </tr>
+          <tr>
+            <td>Voyages of Zheng He</td>
+            <td>1405-1433</td>
+            <td>A series of maritime expeditions led by Chinese admiral Zheng He, showcasing China's naval power and promoting trade and diplomacy.</td>
+          </tr>
+          <tr>
+            <td>Hundred Years' War</td>
+            <td>1337-1453</td>
+            <td>A series of conflicts between England and France, resulting in territorial disputes and political changes.</td>
+          </tr>
+          <tr>
+            <td>Industrialization in Japan</td>
+            <td>19th century</td>
+            <td>Japan underwent a rapid transformation from a feudal society to an industrialized nation, adopting Western technology and practices.</td>
+          </tr>
+          <tr>
+            <td>Invention of the Printing Press</td>
+            <td>15th century</td>
+            <td>Johannes Gutenberg's invention of the printing press revolutionized the spread of knowledge and contributed to the Renaissance and Reformation.</td>
+          </tr>
+          <tr>
+            <td>Spanish-American War</td>
+            <td>1898</td>
+            <td>A conflict between the United States and Spain, resulting in the acquisition of territories by the United States and the end of Spanish colonial rule.</td>
+          </tr>
+          <tr>
+            <td>Abdication of Emperor Napoleon</td>
+            <td>1814</td>
+            <td>Napoleon Bonaparte abdicated as emperor of the French, leading to his exile and the restoration of the Bourbon monarchy.</td>
+          </tr>
+          <tr>
+            <td>Black Death</td>
+            <td>1347-1351</td>
+            <td>A devastating pandemic caused by the bubonic plague, resulting in a significant decline in the population of Europe.</td>
+          </tr>
+          <tr>
+            <td>Age of Discovery</td>
+            <td>15th-17th century</td>
+            <td>A period of European exploration and expansion, with voyages to the Americas, Africa, and Asia.</td>
+          </tr>
+          <tr>
+            <td>Establishment of the European Union</td>
+            <td>1993</td>
+            <td>The Maastricht Treaty was signed, creating the European Union and fostering greater economic and political integration among European nations.</td>
+          </tr>
+          <tr>
+            <td>Russian Revolution</td>
+            <td>1917</td>
+            <td>The Bolsheviks, led by Vladimir Lenin, seized power in Russia, leading to the establishment of a socialist government.</td>
+          </tr>
+          <tr>
+            <td>Chinese Cultural Revolution</td>
+            <td>1966-1976</td>
+            <td>A political movement in China aimed at removing perceived bourgeois elements from society and strengthening communism.</td>
+          </tr>
+          <tr>
+            <td>American Civil War</td>
+            <td>1861-1865</td>
+            <td>A conflict between the Northern states (Union) and the Southern states (Confederacy) over issues including slavery and states' rights.</td>
+          </tr>
+          <tr>
+            <td>Iranian Revolution</td>
+            <td>1979</td>
+            <td>The overthrow of the Shah of Iran and the establishment of an Islamic republic led by Ayatollah Khomeini.</td>
+          </tr>
+          <tr>
+            <td>Japanese Internment</td>
+            <td>1942-1945</td>
+            <td>During World War II, the United States forcibly relocated and interned Japanese-Americans in camps due to national security concerns.</td>
+          </tr>
+          <tr>
+            <td>Russian Civil War</td>
+            <td>1918-1922</td>
+            <td>A multi-sided conflict in Russia following the Russian Revolution, involving various factions fighting for control.</td>
+          </tr>
+          <tr>
+            <td>Haitian Revolution</td>
+            <td>1791-1804</td>
+            <td>A successful slave revolt against French colonial rule, resulting in the establishment of Haiti as an independent nation.</td>
+          </tr>
+          <tr>
+            <td>Opium Wars</td>
+            <td>1839-1860</td>
+            <td>Armed conflicts between China and Western powers over the opium trade and Chinese sovereignty.</td>
+          </tr>          
+    </tbody>
+
+
+</table>
+</body>
+
+<div class="night-mode-toggle">
+  <i id="nightModeIcon" class="fas fa-moon"></i>
+</div>
+
+  
+<script src="script.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+<script src="https://kit.fontawesome.com/your-font-awesome-kit.js"></script> -->
+</html>
