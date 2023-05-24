@@ -126,3 +126,33 @@ body {
 #nightModeIcon{
   color: rgb(234, 52, 119);
 }
+.night-mode .show-more-button {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+}
+.night-mode .show-more-button:hover {
+  background-color: #0f0f24;
+  color: #fff;
+}
+
+
+/* Show More button */
+.show-more-button {
+  width: 100%;
+  background-color: #9494945b;
+  border: none;
+  color: rgb(69, 68, 68);
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.show-more-button:hover {
+  color: #ffffff;
+  background-color: #0f241ed1;
+}
